@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Сонячна система</title> 
+    <style> 
+        body { 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #000; 
+            overflow: hidden; 
+        } 
+ 
+        .solar-system { 
+            position: relative; 
+            width: 600px; 
+            height: 600px; 
+        } 
+ 
+        .sun { 
+            position: absolute; 
+            width: 100px; 
+            height: 100px; 
+            background-color: #f39c12; 
+            border-radius: 50%; 
+            box-shadow: 0 0 50px 20px #f39c12; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+        } 
+ 
+        .orbit { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            border: 1px dashed rgba(255, 255, 255, 0.3); 
+            border-radius: 50%; 
+            transform: translate(-50%, -50%); 
+            animation: rotate linear infinite; 
+        } 
+ 
+        .planet { 
+            position: absolute; 
+            width: 20px; 
+            height: 20px; 
+            border-radius: 50%; 
+            top: -10px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        } 
+ 
+        .orbit:nth-child(2) { 
+            width: 150px; 
+            height: 150px; 
+            animation-duration: 5s; 
+        } 
+ 
+        .orbit:nth-child(2) .planet { 
+            background-color: #e74c3c; /* Меркурій */ 
+        } 
+ 
+        .orbit:nth-child(3) { 
+            width: 200px; 
+            height: 200px; 
+            animation-duration: 8s; 
+        } 
+ 
+        .orbit:nth-child(3) .planet { 
+            background-color: #e7f30a; /* Венера */ 
+        } 
+ 
+        .orbit:nth-child(4) { 
+            width: 300px; 
+            height: 300px; 
+            animation-duration: 12s; 
+        } 
+ 
+        .orbit:nth-child(4) .planet { 
+            background-color: #3498db; /* Земля */ 
+        } 
+ 
+        .orbit:nth-child(5) { 
+            width: 400px; 
+            height: 400px; 
+            animation-duration: 16s; 
+        } 
+ 
+        .orbit:nth-child(5) .planet { 
+            background-color: #e67e22; /* Марс */ 
+        } 
+ 
+        .orbit:nth-child(6) { 
+            width: 500px; 
+            height: 500px; 
+            animation-duration: 20s; 
+        } 
+ 
+        .orbit:nth-child(6) .planet { 
+            background-color: #9b59b6; /* Юпітер */ 
+        } 
+ 
+        .orbit:nth-child(7) { 
+            width: 550px; 
+            height: 550px; 
+            animation-duration: 24s; 
+        } 
+ 
+        .orbit:nth-child(7) .planet { 
+            background-color: #1abc9c; /* Сатурн */ 
+        } 
+ 
+        @keyframes rotate { 
+            from { 
+                transform: translate(-50%, -50%) rotate(0deg); 
+            } 
+            to { 
+                transform: translate(-50%, -50%) rotate(360deg); 
+            } 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="solar-system"> 
+        <div class="sun"></div> 
+        <div class="orbit"> 
+            <div class="planet"></div> 
+        </div> 
+        <div class="orbit"> 
+            <div class="planet"></div> 
+        </div> 
+        <div class="orbit"> 
+            <div class="planet"></div> 
+        </div> 
+        <div class="orbit"> 
+            <div class="planet"></div> 
+        </div> 
+        <div class="orbit"> 
+            <div class="planet"></div> 
+        </div> 
+        <div class="orbit"> 
+            <div class="planet"></div> 
+        </div> 
+    </div> 
+</body> 
+</html>
